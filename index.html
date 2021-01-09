@@ -15,10 +15,13 @@
             <a rel="nofollow" target="_blank" href="https://beget.com/">Beget</a>
         </noindex>
     </h1>
+    <h2>
+        Все команды запускаються с терминала в дириктории проекта в папке .../public_html !
+    </h2>
     <p>1. Перед установкой Laravel вам необходимо выполнить установку пакетного менеджера Composer.</p>
-    <p>Установить его необходимо в корень сайта (дописати шлях)</p>
     <p>Для этого используйте команды:</p>
-    <pre class="installer">php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    <pre
+        >php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
         php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
         php composer-setup.php
         php -r "unlink('composer-setup.php');"
@@ -27,7 +30,22 @@
         <noindex>
             <a rel="nofollow" target="_blank" href="https://getcomposer.org/download/">Composer</a>
         </noindex>
-         и скопируйте 4 команды для скачивания и установки Composer в проект. Эти команды укажите в терминале находясь в самом проекте.&nbsp;
-    </p>
+        и скопируйте 4 команды для скачивания и установки Composer в проект.<br>
+        Эти команды укажите в терминале находясь в самом проекте.
+    </p><br>
+
+    <p>2. После установки Composer необходимо выполнить установку Laravel глобально для системы.</p>
+    <pre> 
+        php composer.phar global require laravel/installer 
+    </pre>
+    <p>Эта команда позволит установить Laravel глобально в систему. 
+        Выполните её лишь один раз и при создании будущих проектов игнорируйте данную команду, не устанавливая Laravel повторно.
+    </p><br>
+
+    <p>3. Далее необходимо создать проект Laravel. Для этого в терминале пропишите команду:</p>
+    <pre>
+        php composer.phar create-project --prefer-dist laravel/laravel
+    </pre>
+    <p>Установка завершина.</p>
 </body>
 </html>
