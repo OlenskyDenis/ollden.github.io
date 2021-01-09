@@ -6,6 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hi!</h1>
+    <h1>Установка 
+        <noindex>
+            <a rel="nofollow" target="_blank" href="https://laravel.com/">Laravel</a>
+        </noindex>
+         на виртуальный хостинг  
+        <noindex>
+            <a rel="nofollow" target="_blank" href="https://beget.com/">Beget</a>
+        </noindex>
+    </h1>
+    <p>1. Перед установкой Laravel вам необходимо выполнить установку пакетного менеджера Composer.</p>
+    <p>Установить его необходимо в корень сайта (дописати шлях)</p>
+    <p>Для этого используйте команды:</p>
+    <pre class="installer">php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+        php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+        php composer-setup.php
+        php -r "unlink('composer-setup.php');"
+    </pre>
+    <p> Либо перейдите на официальный сайт
+        <noindex>
+            <a rel="nofollow" target="_blank" href="https://getcomposer.org/download/">Composer</a>
+        </noindex>
+         и скопируйте 4 команды для скачивания и установки Composer в проект. Эти команды укажите в терминале находясь в самом проекте.&nbsp;
+    </p>
 </body>
 </html>
