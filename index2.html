@@ -21,7 +21,7 @@
 
         <div class="installing">
             <h2>
-                Все команды запускаються с терминала в дириктории проекта в папке .../public_html !
+                Все команды запускаються с терминала в дириктории проекта, там же находиться .../public_html !
             </h2>
             <p>1. Перед установкой Laravel вам необходимо выполнить установку пакетного менеджера Composer.</p>
             <p>Для этого используйте команды:</p>
@@ -51,6 +51,8 @@
             <pre>
                 php composer.phar create-project --prefer-dist laravel/laravel
             </pre>
+            <p>4. После, необходимо перенести содержимое c только что созданной папки laravel в папку public_html</p>
+            <p>4. Папку laravel можна удалить, больше она нам не понадобится</p>
             <p>Установка завершена.</p>
         </div>
 
@@ -60,11 +62,12 @@
             <p> Содержимое файла:</p>
             <pre>
                 RewriteEngine on
-                RewriteCond %{HTTP_HOST} ^twixgi27.beget.tech$ [NC,OR]
-                RewriteCond %{HTTP_HOST} ^www.twixgi27.beget.tech$
+                RewriteCond %{HTTP_HOST} ^siteAddress$ [NC,OR]
+                RewriteCond %{HTTP_HOST} ^www.siteAddress$
                 RewriteCond %{REQUEST_URI} !public/
                 RewriteRule (.*) /public/$1 [L]
             </pre>
+            <p> Важно!<br> siteAddress - необходимо заменить на ваш адрес сайта</p>
             <p>6. В папке .../public_html/public изменить содержимое файла .htaccess на:</p>
             <pre>
                 &lt;IfModule mod_rewrite.c&gt;
