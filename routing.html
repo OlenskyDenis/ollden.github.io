@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Routing</h1>
+        <p>
+            By default, routes are stored in the <strong>routes/web.php</strong> directory.
+        </p>
+        <!-- <details>
+            <summary> </summary>
+            <code>
+
+            </code>
+        </details> -->
+
+        <details>
+            <summary>Basic Routing</summary>
+            <br>
+            <code>
+                use Illuminate\Support\Facades\Route;<br><br>
+    
+                Route::get('/hello', function () {<br>
+                    return 'Hello World';<br>
+                });<br>
+            </code>
+            <h3>The Default Route Files :</h3>
+            <code>
+                use App\Http\Controllers\UserController;<br><br>
+    
+                Route::get('/user', [UserController::class, 'index']);<br>
+            </code>
+        </details>
+
+        <details>
+            <summary>Route Parameters</summary>
+            <h3>Один параметр :</h3>
+            <code>
+                Route::get('/hello/<strong>{name}</strong>', function (<strong>$name</strong>) {<br>
+                    return 'Hello '.<strong>$name</strong>;<br>
+                });
+            </code>
+            <h3>Кілька параметрів :</h3>
+            <code>
+                Route::get('/hello/<strong>{name}</strong>/age/<strong>{age}</strong>', function (<strong>$name</strong>,<strong>$age</strong>) {<br>
+                    return 'Hello '.<strong>$name</strong> .', your age is '.<strong>$age</strong>;<br>
+                });
+            </code>
+        </details>
+        
+        <details>
+            <summary>Named Routes</summary>
+            <br>
+            <code>
+                Route::get('/hello', function () {<br>
+                    return 'Hello World';<br>
+                })<strong>->name('hello')</strong>;<br>
+            </code>
+        </details>
+    </div>
+</body>
+</html>
