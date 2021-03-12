@@ -10,6 +10,15 @@ body{
 .overflow{
     overflow: auto;
 }
+li{
+    margin: 20px 0;
+}
 a{
     text-decoration: none;
+    font-size: 20px;
+}
+summary{
+    margin: 20px 0;
+    font-size: 25px;
+    outline: none;
 }
