@@ -1,24 +1,45 @@
-body{
-    color:rgb(32, 32, 32);
+body {
+    color: rgb(32, 32, 32);
     margin: 0;
     padding: 0;
 }
-.container{
+
+.container {
     width: 1000px;
     margin: 0 auto;
 }
-.overflow{
+
+.overflow {
     overflow: auto;
 }
-li{
+
+li {
     margin: 20px 0;
 }
-a{
+
+a {
     text-decoration: none;
     font-size: 20px;
 }
-summary{
+
+summary {
     margin: 20px 0;
     font-size: 25px;
     outline: none;
+}
+
+.main_box {
+    height: 200px;
+    width: 500px;
+    border: solid black;
+    margin: 50px;
+}
+
+.main_box img {
+    width: 200px;
+    height: 200px;
+}
+
+.main_box a {
+    font-size: 30px;
 }
